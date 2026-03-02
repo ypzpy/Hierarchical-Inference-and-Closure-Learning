@@ -1,0 +1,67 @@
+data_systems:
+  rng_key: 0
+  n_systems: 20
+  nx: 50
+  ny: 50
+  L_x: 1.0
+  L_y: 1.0
+  obser_noise: 0.1
+  obser_fraction: 0.024
+  no_parameters: 3
+
+
+true_parameters:
+  hyperprior_z1: 0.2
+  hyperprior_z2: -0.1
+  hyperprior_z3: 0.2
+  tau_phi_z1: 0.5
+  tau_phi_z2: 0.5
+  tau_phi_z3: 0.5
+
+
+prior:
+  mean:
+    z1_mean: 0.0
+    z2_mean: 0.2
+    z3_mean: -0.1
+  variance:
+    z1_variance: 1.0
+    z2_variance: 1.0
+    z3_variance: 1.0
+
+
+langevin_sampler:
+  n_samples: 1
+  n_chains: 160
+  batch_num: 4
+  step_size: 0.01
+  accept_ratio: 0.574
+  step_size_lr: 0.005
+  damping_param: 10
+
+
+models:
+  mlp_alpha:
+    hidden_features: [64,64,64,64]
+    output_features: 1
+    learning_rate: 0.0005
+    n_decay_steps: 1000
+    decay_rate: 0.8
+  pinn_beta:
+    layers: [5, 64, 64, 64, 64, 64, 1]
+    learning_rate: 0.001
+    n_decay_steps: 2000
+    decay_rate: 0.8
+    opt_type: 'adam'
+    weight_decay: 0.001
+    fno_steps: 20
+
+
+wandb:
+  entity: "pz281-university-of-cambridge"
+  project: 'Bilevel Optimisation'
+  run_name: 'poisson'
+  # group: 'poisson supervised loss'
+  group: 'poisson PINNs nonhierarchy'
+  # group: 'solver mala'
+  # group: 'pure mala'

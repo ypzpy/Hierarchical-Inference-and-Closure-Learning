@@ -1,0 +1,439 @@
+Checkpoint directory: /home/pz/Documents/model_discrepancy/Hierarchical_Inference_and_Closure_Learning/poisson/wandb/run-20260302_220729-u2fxitm2/files/checkpoints
+Done.
+Generating GT parameter matrix and observation data...
+     Maximum u value:  2.3598943
+Done.
+Initialising batched parameters and langevin chain...
+Done.
+Initialising alpha and beta models...
+Done.
+Starting bilevel training...
+Epoch 0 completed in 33.06 seconds.
+Epoch 0: New best model saved with L2 Error: 9.744981
+Epoch:  0  Log likelihood loss:  65307.32  L2 Error:  9.744981
+      z1, z2, z3 =  [ 0.04055719  0.13965648 -0.05556957]
+      variance =  [0.20343582 0.1901134  0.20804864]
+Epoch 1 completed in 0.22 seconds.
+Epoch:  1  Log likelihood loss:  73616.58  L2 Error:  9.880159
+      z1, z2, z3 =  [ 0.03921792  0.14046222 -0.0579791 ]
+      variance =  [0.20351125 0.19027777 0.20786452]
+Epoch 2 completed in 0.22 seconds.
+Epoch:  2  Log likelihood loss:  72646.914  L2 Error:  9.941848
+      z1, z2, z3 =  [ 0.03636869  0.14032416 -0.05635121]
+      variance =  [0.20364924 0.19018792 0.20766246]
+Epoch 3 completed in 0.22 seconds.
+Epoch:  3  Log likelihood loss:  71178.15  L2 Error:  9.978848
+      z1, z2, z3 =  [ 0.03807202  0.14041816 -0.05740881]
+      variance =  [0.20370206 0.19018157 0.20774582]
+Epoch 4 completed in 0.22 seconds.
+Epoch:  4  Log likelihood loss:  72425.17  L2 Error:  9.944637
+      z1, z2, z3 =  [ 0.03804248  0.14016935 -0.05473701]
+      variance =  [0.20384647 0.19000146 0.20763119]
+Epoch 5 completed in 0.22 seconds.
+Epoch:  5  Log likelihood loss:  64356.363  L2 Error:  9.84692
+      z1, z2, z3 =  [ 0.03520552  0.14095119 -0.05354792]
+      variance =  [0.20386823 0.19022991 0.20780648]
+Epoch 6 completed in 0.22 seconds.
+Epoch 6: New best model saved with L2 Error: 9.717291
+Epoch:  6  Log likelihood loss:  63489.445  L2 Error:  9.717291
+      z1, z2, z3 =  [ 0.03683569  0.14075857 -0.05405308]
+      variance =  [0.20391361 0.19013806 0.20781025]
+Epoch 7 completed in 0.22 seconds.
+Epoch 7: New best model saved with L2 Error: 9.563095
+Epoch:  7  Log likelihood loss:  60729.656  L2 Error:  9.563095
+      z1, z2, z3 =  [ 0.03814279  0.14155719 -0.05623582]
+      variance =  [0.20393014 0.1902834  0.20795624]
+Epoch 8 completed in 0.22 seconds.
+Epoch 8: New best model saved with L2 Error: 9.389463
+Epoch:  8  Log likelihood loss:  43164.242  L2 Error:  9.389463
+      z1, z2, z3 =  [ 0.03752842  0.14084516 -0.05527004]
+      variance =  [0.20395087 0.19036329 0.20803577]
+Epoch 9 completed in 0.22 seconds.
+Epoch 9: New best model saved with L2 Error: 9.186166
+Epoch:  9  Log likelihood loss:  35535.05  L2 Error:  9.186166
+      z1, z2, z3 =  [ 0.03760554  0.14108542 -0.05662125]
+      variance =  [0.20402694 0.19055223 0.20813958]
+Epoch 10 completed in 0.22 seconds.
+Epoch 10: New best model saved with L2 Error: 8.965055
+Epoch:  10  Log likelihood loss:  24016.195  L2 Error:  8.9650545
+      z1, z2, z3 =  [ 0.03707136  0.1381475  -0.05332704]
+      variance =  [0.20422678 0.19031389 0.20817725]
+Epoch 11 completed in 0.22 seconds.
+Epoch 11: New best model saved with L2 Error: 8.727866
+Epoch:  11  Log likelihood loss:  15850.743  L2 Error:  8.727866
+      z1, z2, z3 =  [ 0.03801114  0.13930081 -0.05532534]
+      variance =  [0.20426781 0.19034438 0.20816812]
+Epoch 12 completed in 0.22 seconds.
+Epoch 12: New best model saved with L2 Error: 8.480117
+Epoch:  12  Log likelihood loss:  19892.227  L2 Error:  8.480117
+      z1, z2, z3 =  [ 0.04073651  0.13932338 -0.05494722]
+      variance =  [0.20421898 0.19025408 0.2084038 ]
+Epoch 13 completed in 0.22 seconds.
+Epoch 13: New best model saved with L2 Error: 8.256426
+Epoch:  13  Log likelihood loss:  14001.998  L2 Error:  8.256426
+      z1, z2, z3 =  [ 0.03988133  0.13912848 -0.05413175]
+      variance =  [0.20425504 0.19019318 0.20839483]
+Epoch 14 completed in 0.22 seconds.
+Epoch 14: New best model saved with L2 Error: 8.016888
+Epoch:  14  Log likelihood loss:  16851.453  L2 Error:  8.016888
+      z1, z2, z3 =  [ 0.04093516  0.14033075 -0.05494541]
+      variance =  [0.20429154 0.19020757 0.20843653]
+Epoch 15 completed in 0.22 seconds.
+Epoch 15: New best model saved with L2 Error: 7.807248
+Epoch:  15  Log likelihood loss:  10961.09  L2 Error:  7.807248
+      z1, z2, z3 =  [ 0.0391316   0.1409211  -0.05486808]
+      variance =  [0.2043243  0.19043845 0.20878536]
+Epoch 16 completed in 0.24 seconds.
+Epoch 16: New best model saved with L2 Error: 7.593997
+Epoch:  16  Log likelihood loss:  22337.096  L2 Error:  7.593997
+      z1, z2, z3 =  [ 0.04088264  0.14047658 -0.05500732]
+      variance =  [0.20437466 0.19017817 0.20878127]
+Epoch 17 completed in 0.22 seconds.
+Epoch 17: New best model saved with L2 Error: 7.392071
+Epoch:  17  Log likelihood loss:  6059.95  L2 Error:  7.392071
+      z1, z2, z3 =  [ 0.04079537  0.14113446 -0.05560264]
+      variance =  [0.20445098 0.19012538 0.20868173]
+Epoch 18 completed in 0.22 seconds.
+Epoch 18: New best model saved with L2 Error: 7.238186
+Epoch:  18  Log likelihood loss:  9713.439  L2 Error:  7.2381864
+      z1, z2, z3 =  [ 0.03970399  0.14090036 -0.05611605]
+      variance =  [0.20446259 0.1902274  0.20869139]
+Epoch 19 completed in 0.22 seconds.
+Epoch 19: New best model saved with L2 Error: 7.079777
+Epoch:  19  Log likelihood loss:  10769.613  L2 Error:  7.079777
+      z1, z2, z3 =  [ 0.03941883  0.14204459 -0.05778943]
+      variance =  [0.20440935 0.19044389 0.20894869]
+Epoch 20 completed in 0.22 seconds.
+Epoch 20: New best model saved with L2 Error: 6.976447
+Epoch:  20  Log likelihood loss:  15220.215  L2 Error:  6.976447
+      z1, z2, z3 =  [ 0.03901429  0.14298968 -0.05845891]
+      variance =  [0.20436233 0.19071753 0.20917748]
+Epoch 21 completed in 0.22 seconds.
+Epoch 21: New best model saved with L2 Error: 6.907596
+Epoch:  21  Log likelihood loss:  9010.244  L2 Error:  6.907596
+      z1, z2, z3 =  [ 0.03759834  0.14097436 -0.05619673]
+      variance =  [0.20459841 0.19038425 0.20885432]
+Epoch 22 completed in 0.22 seconds.
+Epoch 22: New best model saved with L2 Error: 6.894445
+Epoch:  22  Log likelihood loss:  12562.961  L2 Error:  6.8944454
+      z1, z2, z3 =  [ 0.03710523  0.14077725 -0.05328717]
+      variance =  [0.2046444  0.19041042 0.20906432]
+Epoch 23 completed in 0.22 seconds.
+Epoch:  23  Log likelihood loss:  7834.8354  L2 Error:  6.9316998
+      z1, z2, z3 =  [ 0.03939271  0.14093135 -0.05350611]
+      variance =  [0.20466343 0.19034678 0.20918697]
+Epoch 24 completed in 0.22 seconds.
+Epoch:  24  Log likelihood loss:  7339.6484  L2 Error:  7.0209703
+      z1, z2, z3 =  [ 0.04161356  0.14156826 -0.05453388]
+      variance =  [0.204697   0.19025722 0.20927182]
+Epoch 25 completed in 0.22 seconds.
+Epoch:  25  Log likelihood loss:  7116.3506  L2 Error:  7.138404
+      z1, z2, z3 =  [ 0.0420155   0.14323832 -0.05704274]
+      variance =  [0.20463884 0.19025148 0.2093821 ]
+Epoch 26 completed in 0.22 seconds.
+Epoch:  26  Log likelihood loss:  4599.258  L2 Error:  7.278833
+      z1, z2, z3 =  [ 0.03932833  0.14333405 -0.05646908]
+      variance =  [0.20472911 0.19024312 0.20944016]
+Epoch 27 completed in 0.22 seconds.
+Epoch:  27  Log likelihood loss:  3948.127  L2 Error:  7.423822
+      z1, z2, z3 =  [ 0.03886027  0.14320175 -0.05630029]
+      variance =  [0.20476194 0.19010092 0.2093439 ]
+Epoch 28 completed in 0.22 seconds.
+Epoch:  28  Log likelihood loss:  10311.888  L2 Error:  7.592842
+      z1, z2, z3 =  [ 0.03799129  0.14465143 -0.05693262]
+      variance =  [0.20480797 0.19000424 0.20926279]
+Epoch 29 completed in 0.22 seconds.
+Epoch:  29  Log likelihood loss:  10816.432  L2 Error:  7.788233
+      z1, z2, z3 =  [ 0.03602428  0.14365809 -0.05357629]
+      variance =  [0.20488864 0.18991452 0.20909934]
+Epoch 30 completed in 0.22 seconds.
+Epoch:  30  Log likelihood loss:  2666.4905  L2 Error:  7.9807434
+      z1, z2, z3 =  [ 0.03467961  0.14338791 -0.05467394]
+      variance =  [0.2049824  0.1900451  0.20897307]
+Epoch 31 completed in 0.22 seconds.
+Epoch:  31  Log likelihood loss:  2281.2505  L2 Error:  8.168863
+      z1, z2, z3 =  [ 0.03508778  0.1439898  -0.05533641]
+      variance =  [0.20502904 0.19005811 0.20888081]
+Epoch 32 completed in 0.22 seconds.
+Epoch:  32  Log likelihood loss:  7054.2373  L2 Error:  8.367418
+      z1, z2, z3 =  [ 0.03427808  0.14476003 -0.05570517]
+      variance =  [0.2050323  0.19008099 0.20894922]
+Epoch 33 completed in 0.22 seconds.
+Epoch:  33  Log likelihood loss:  2347.2314  L2 Error:  8.552004
+      z1, z2, z3 =  [ 0.0346773   0.14505923 -0.05569776]
+      variance =  [0.20510237 0.18990299 0.20873629]
+Epoch 34 completed in 0.22 seconds.
+Epoch:  34  Log likelihood loss:  3752.4475  L2 Error:  8.743169
+      z1, z2, z3 =  [ 0.03270882  0.1449446  -0.05487273]
+      variance =  [0.20504738 0.18988016 0.20879622]
+Epoch 35 completed in 0.22 seconds.
+Epoch:  35  Log likelihood loss:  5916.427  L2 Error:  8.921016
+      z1, z2, z3 =  [ 0.03210014  0.14517955 -0.05492857]
+      variance =  [0.20517282 0.18992734 0.20884971]
+Epoch 36 completed in 0.22 seconds.
+Epoch:  36  Log likelihood loss:  4010.7236  L2 Error:  9.106013
+      z1, z2, z3 =  [ 0.03220226  0.1457068  -0.05562656]
+      variance =  [0.20521976 0.18993324 0.2087739 ]
+Epoch 37 completed in 0.22 seconds.
+Epoch:  37  Log likelihood loss:  4379.456  L2 Error:  9.285218
+      z1, z2, z3 =  [ 0.03241731  0.14534433 -0.05543749]
+      variance =  [0.20529428 0.18982564 0.20862901]
+Epoch 38 completed in 0.22 seconds.
+Epoch:  38  Log likelihood loss:  3976.003  L2 Error:  9.4717455
+      z1, z2, z3 =  [ 0.03303687  0.1449487  -0.05565014]
+      variance =  [0.20532164 0.18973447 0.20848008]
+Epoch 39 completed in 0.22 seconds.
+Epoch:  39  Log likelihood loss:  5459.1055  L2 Error:  9.662079
+      z1, z2, z3 =  [ 0.0317302   0.1442142  -0.05463317]
+      variance =  [0.20545334 0.18964474 0.20836155]
+Epoch 40 completed in 0.22 seconds.
+Epoch:  40  Log likelihood loss:  1612.0989  L2 Error:  9.830054
+      z1, z2, z3 =  [ 0.03188873  0.14455764 -0.05569506]
+      variance =  [0.20554085 0.1894824  0.20821162]
+Epoch 41 completed in 0.22 seconds.
+Epoch:  41  Log likelihood loss:  3018.874  L2 Error:  9.981738
+      z1, z2, z3 =  [ 0.03105808  0.1446738  -0.0560831 ]
+      variance =  [0.20557413 0.1895016  0.20823993]
+Epoch 42 completed in 0.22 seconds.
+Epoch:  42  Log likelihood loss:  4115.38  L2 Error:  10.151665
+      z1, z2, z3 =  [ 0.0303326   0.14515732 -0.05633007]
+      variance =  [0.20569447 0.18950066 0.20828941]
+Epoch 43 completed in 0.22 seconds.
+Epoch:  43  Log likelihood loss:  1412.1486  L2 Error:  10.304038
+      z1, z2, z3 =  [ 0.03012513  0.14510654 -0.05549162]
+      variance =  [0.2056953  0.18946323 0.20836565]
+Epoch 44 completed in 0.22 seconds.
+Epoch:  44  Log likelihood loss:  4519.0874  L2 Error:  10.432384
+      z1, z2, z3 =  [ 0.02929135  0.14526916 -0.056245  ]
+      variance =  [0.20577545 0.18947272 0.20839787]
+Epoch 45 completed in 0.22 seconds.
+Epoch:  45  Log likelihood loss:  1458.5841  L2 Error:  10.54308
+      z1, z2, z3 =  [ 0.02881836  0.14563453 -0.05642859]
+      variance =  [0.20581254 0.18940929 0.20830922]
+Epoch 46 completed in 0.22 seconds.
+Epoch:  46  Log likelihood loss:  1152.992  L2 Error:  10.630525
+      z1, z2, z3 =  [ 0.02895915  0.14545177 -0.056579  ]
+      variance =  [0.20580114 0.18939562 0.20830734]
+Epoch 47 completed in 0.22 seconds.
+Epoch:  47  Log likelihood loss:  3399.939  L2 Error:  10.715632
+      z1, z2, z3 =  [ 0.0294315   0.14617132 -0.05695543]
+      variance =  [0.20580666 0.18946542 0.208227  ]
+Epoch 48 completed in 0.22 seconds.
+Epoch:  48  Log likelihood loss:  1633.7738  L2 Error:  10.788764
+      z1, z2, z3 =  [ 0.02965168  0.14730324 -0.05652333]
+      variance =  [0.20582965 0.18938762 0.20825902]
+Epoch 49 completed in 0.22 seconds.
+Epoch:  49  Log likelihood loss:  6514.5894  L2 Error:  10.829129
+      z1, z2, z3 =  [ 0.03021019  0.14789292 -0.05735052]
+      variance =  [0.20587106 0.18936795 0.2083175 ]
+Epoch 50 completed in 0.22 seconds.
+Epoch:  50  Log likelihood loss:  1574.4163  L2 Error:  10.864551
+      z1, z2, z3 =  [ 0.0298989   0.14707097 -0.05756761]
+      variance =  [0.20597565 0.18927114 0.20822133]
+Epoch 51 completed in 0.22 seconds.
+Epoch:  51  Log likelihood loss:  1656.8496  L2 Error:  10.897669
+      z1, z2, z3 =  [ 0.03003855  0.14742911 -0.05743975]
+      variance =  [0.20597492 0.18921089 0.2082683 ]
+Epoch 52 completed in 0.22 seconds.
+Epoch:  52  Log likelihood loss:  3346.1045  L2 Error:  10.881938
+      z1, z2, z3 =  [ 0.03016683  0.14800395 -0.05779836]
+      variance =  [0.20592411 0.18925111 0.20827182]
+Epoch 53 completed in 0.22 seconds.
+Epoch:  53  Log likelihood loss:  1498.6405  L2 Error:  10.878738
+      z1, z2, z3 =  [ 0.03084643  0.14757077 -0.05809484]
+      variance =  [0.20602967 0.1891619  0.20827572]
+Epoch 54 completed in 0.22 seconds.
+Epoch:  54  Log likelihood loss:  1325.7135  L2 Error:  10.850881
+      z1, z2, z3 =  [ 0.03059651  0.14789727 -0.05913077]
+      variance =  [0.20613725 0.18929805 0.20833777]
+Epoch 55 completed in 0.22 seconds.
+Epoch:  55  Log likelihood loss:  1986.3732  L2 Error:  10.850151
+      z1, z2, z3 =  [ 0.03006172  0.14867322 -0.05947762]
+      variance =  [0.20616557 0.18937887 0.20841716]
+Epoch 56 completed in 0.22 seconds.
+Epoch:  56  Log likelihood loss:  1266.4271  L2 Error:  10.844099
+      z1, z2, z3 =  [ 0.02900759  0.14890729 -0.05934798]
+      variance =  [0.20614737 0.18938182 0.2084534 ]
+Epoch 57 completed in 0.22 seconds.
+Epoch:  57  Log likelihood loss:  2188.0508  L2 Error:  10.868895
+      z1, z2, z3 =  [ 0.02846481  0.1499375  -0.05892959]
+      variance =  [0.20614317 0.1894298  0.20859717]
+Epoch 58 completed in 0.22 seconds.
+Epoch:  58  Log likelihood loss:  1607.5127  L2 Error:  10.890389
+      z1, z2, z3 =  [ 0.02725051  0.1488854  -0.05854938]
+      variance =  [0.2060536  0.18953787 0.20859449]
+Epoch 59 completed in 0.22 seconds.
+Epoch:  59  Log likelihood loss:  4631.0713  L2 Error:  10.875196
+      z1, z2, z3 =  [ 0.02746319  0.14922272 -0.05823628]
+      variance =  [0.20612079 0.18959664 0.20871168]
+Epoch 60 completed in 0.22 seconds.
+Epoch:  60  Log likelihood loss:  3362.499  L2 Error:  10.880693
+      z1, z2, z3 =  [ 0.02859412  0.14951703 -0.05904454]
+      variance =  [0.20621195 0.18954228 0.20868883]
+Epoch 61 completed in 0.22 seconds.
+Epoch:  61  Log likelihood loss:  1629.49  L2 Error:  10.867829
+      z1, z2, z3 =  [ 0.02680162  0.15013817 -0.05833777]
+      variance =  [0.20619255 0.1898286  0.20896174]
+Epoch 62 completed in 0.22 seconds.
+Epoch:  62  Log likelihood loss:  1820.7325  L2 Error:  10.847853
+      z1, z2, z3 =  [ 0.02716576  0.15048575 -0.05878342]
+      variance =  [0.2061948  0.18991522 0.20912872]
+Epoch 63 completed in 0.22 seconds.
+Epoch:  63  Log likelihood loss:  8955.023  L2 Error:  10.824511
+      z1, z2, z3 =  [ 0.02761327  0.15080042 -0.05905229]
+      variance =  [0.2061576  0.18991135 0.20928308]
+Epoch 64 completed in 0.22 seconds.
+Epoch:  64  Log likelihood loss:  2157.2212  L2 Error:  10.809185
+      z1, z2, z3 =  [ 0.02749076  0.1500136  -0.05770643]
+      variance =  [0.20619428 0.18973897 0.20923534]
+Epoch 65 completed in 0.22 seconds.
+Epoch:  65  Log likelihood loss:  2516.0981  L2 Error:  10.814993
+      z1, z2, z3 =  [ 0.02775008  0.14963904 -0.05806841]
+      variance =  [0.20622507 0.18979146 0.20930353]
+Epoch 66 completed in 0.22 seconds.
+Epoch:  66  Log likelihood loss:  2830.8235  L2 Error:  10.840184
+      z1, z2, z3 =  [ 0.02776146  0.14961953 -0.05746016]
+      variance =  [0.20624845 0.18991962 0.2093898 ]
+Epoch 67 completed in 0.22 seconds.
+Epoch:  67  Log likelihood loss:  2519.3047  L2 Error:  10.874797
+      z1, z2, z3 =  [ 0.02654391  0.15006946 -0.05658039]
+      variance =  [0.20618975 0.18998587 0.20943557]
+Epoch 68 completed in 0.22 seconds.
+Epoch:  68  Log likelihood loss:  2214.2312  L2 Error:  10.899661
+      z1, z2, z3 =  [ 0.02582396  0.15073675 -0.05658994]
+      variance =  [0.20617436 0.19013286 0.20964971]
+Epoch 69 completed in 0.22 seconds.
+Epoch:  69  Log likelihood loss:  2068.5063  L2 Error:  10.912937
+      z1, z2, z3 =  [ 0.0260219   0.15144168 -0.05726495]
+      variance =  [0.20613529 0.19017376 0.20976096]
+Epoch 70 completed in 0.22 seconds.
+Epoch:  70  Log likelihood loss:  2454.5508  L2 Error:  10.931019
+      z1, z2, z3 =  [ 0.02648123  0.1523773  -0.0578559 ]
+      variance =  [0.2061756  0.19026755 0.20985943]
+Epoch 71 completed in 0.22 seconds.
+Epoch:  71  Log likelihood loss:  2745.2556  L2 Error:  10.933484
+      z1, z2, z3 =  [ 0.02698462  0.15278701 -0.0571852 ]
+      variance =  [0.20614016 0.19033724 0.20998153]
+Epoch 72 completed in 0.21 seconds.
+Epoch:  72  Log likelihood loss:  3285.3013  L2 Error:  10.964006
+      z1, z2, z3 =  [ 0.02605981  0.15223527 -0.05712641]
+      variance =  [0.20619978 0.19036523 0.20996162]
+Epoch 73 completed in 0.22 seconds.
+Epoch:  73  Log likelihood loss:  2716.228  L2 Error:  10.970722
+      z1, z2, z3 =  [ 0.02600415  0.15230851 -0.05708533]
+      variance =  [0.20619446 0.19050921 0.21025455]
+Epoch 74 completed in 0.22 seconds.
+Epoch:  74  Log likelihood loss:  2643.1375  L2 Error:  10.972274
+      z1, z2, z3 =  [ 0.02642766  0.15296586 -0.05746535]
+      variance =  [0.20624699 0.1905856  0.21033086]
+Epoch 75 completed in 0.22 seconds.
+Epoch:  75  Log likelihood loss:  3148.0103  L2 Error:  11.000514
+      z1, z2, z3 =  [ 0.02731383  0.15369286 -0.05795633]
+      variance =  [0.20623666 0.1906362  0.21044457]
+Epoch 76 completed in 0.22 seconds.
+Epoch:  76  Log likelihood loss:  3449.2153  L2 Error:  11.069867
+      z1, z2, z3 =  [ 0.0277074   0.1533873  -0.05667278]
+      variance =  [0.20623712 0.19069843 0.21054856]
+Epoch 77 completed in 0.22 seconds.
+Epoch:  77  Log likelihood loss:  2508.722  L2 Error:  11.126362
+      z1, z2, z3 =  [ 0.02816191  0.1534312  -0.05776689]
+      variance =  [0.20630698 0.19073805 0.21072212]
+Epoch 78 completed in 0.22 seconds.
+Epoch:  78  Log likelihood loss:  2645.205  L2 Error:  11.172461
+      z1, z2, z3 =  [ 0.02818309  0.15382366 -0.05832127]
+      variance =  [0.20637083 0.1908073  0.21086654]
+Epoch 79 completed in 0.22 seconds.
+Epoch:  79  Log likelihood loss:  2410.9119  L2 Error:  11.212335
+      z1, z2, z3 =  [ 0.02817318  0.1544816  -0.05895578]
+      variance =  [0.20639467 0.19089386 0.21099016]
+Epoch 80 completed in 0.22 seconds.
+Epoch:  80  Log likelihood loss:  2254.946  L2 Error:  11.245491
+      z1, z2, z3 =  [ 0.02928695  0.15586494 -0.05844224]
+      variance =  [0.20644525 0.19093345 0.21107031]
+Epoch 81 completed in 0.22 seconds.
+Epoch:  81  Log likelihood loss:  3482.6057  L2 Error:  11.350298
+      z1, z2, z3 =  [ 0.0298633   0.15552269 -0.05929772]
+      variance =  [0.20643136 0.19099106 0.2112136 ]
+Epoch 82 completed in 0.22 seconds.
+Epoch:  82  Log likelihood loss:  2233.9744  L2 Error:  11.471852
+      z1, z2, z3 =  [ 0.03001203  0.15647137 -0.0595984 ]
+      variance =  [0.20641577 0.19113629 0.21151012]
+Epoch 83 completed in 0.22 seconds.
+Epoch:  83  Log likelihood loss:  3945.266  L2 Error:  11.53387
+      z1, z2, z3 =  [ 0.03128528  0.15752561 -0.06036697]
+      variance =  [0.20650236 0.19110498 0.2117081 ]
+Epoch 84 completed in 0.22 seconds.
+Epoch:  84  Log likelihood loss:  4485.7285  L2 Error:  11.545521
+      z1, z2, z3 =  [ 0.03145875  0.15752469 -0.06146576]
+      variance =  [0.20655681 0.19113289 0.21173437]
+Epoch 85 completed in 0.22 seconds.
+Epoch:  85  Log likelihood loss:  1940.7148  L2 Error:  11.559787
+      z1, z2, z3 =  [ 0.03047615  0.15803437 -0.06120254]
+      variance =  [0.20666784 0.19104885 0.21161483]
+Epoch 86 completed in 0.22 seconds.
+Epoch:  86  Log likelihood loss:  1916.0242  L2 Error:  11.589849
+      z1, z2, z3 =  [ 0.02996384  0.15809219 -0.0612963 ]
+      variance =  [0.20666294 0.19105548 0.21169722]
+Epoch 87 completed in 0.22 seconds.
+Epoch:  87  Log likelihood loss:  2040.665  L2 Error:  11.588533
+      z1, z2, z3 =  [ 0.03066132  0.15802233 -0.06110753]
+      variance =  [0.20679176 0.19113344 0.21179847]
+Epoch 88 completed in 0.22 seconds.
+Epoch:  88  Log likelihood loss:  1813.3191  L2 Error:  11.573996
+      z1, z2, z3 =  [ 0.03000772  0.15819086 -0.06110336]
+      variance =  [0.20687468 0.19117686 0.2118266 ]
+Epoch 89 completed in 0.22 seconds.
+Epoch:  89  Log likelihood loss:  1983.0895  L2 Error:  11.597045
+      z1, z2, z3 =  [ 0.02961239  0.15799907 -0.06114079]
+      variance =  [0.2069707  0.19116908 0.21181403]
+Epoch 90 completed in 0.22 seconds.
+Epoch:  90  Log likelihood loss:  2132.6316  L2 Error:  11.585455
+      z1, z2, z3 =  [ 0.02820058  0.15741614 -0.06102616]
+      variance =  [0.20697783 0.19125448 0.21189278]
+Epoch 91 completed in 0.22 seconds.
+Epoch:  91  Log likelihood loss:  2058.5952  L2 Error:  11.606498
+      z1, z2, z3 =  [ 0.02781199  0.15684511 -0.06111879]
+      variance =  [0.20717071 0.19119889 0.21186487]
+Epoch 92 completed in 0.22 seconds.
+Epoch:  92  Log likelihood loss:  1817.8145  L2 Error:  11.614482
+      z1, z2, z3 =  [ 0.02816347  0.15745723 -0.06116676]
+      variance =  [0.2072111  0.19126257 0.21195996]
+Epoch 93 completed in 0.22 seconds.
+Epoch:  93  Log likelihood loss:  2854.8809  L2 Error:  11.562298
+      z1, z2, z3 =  [ 0.02847137  0.15796186 -0.06087974]
+      variance =  [0.20724723 0.19129299 0.2119406 ]
+Epoch 94 completed in 0.22 seconds.
+Epoch:  94  Log likelihood loss:  2383.7515  L2 Error:  11.461807
+      z1, z2, z3 =  [ 0.02852111  0.15796748 -0.06126162]
+      variance =  [0.20726842 0.19122256 0.21187879]
+Epoch 95 completed in 0.22 seconds.
+Epoch:  95  Log likelihood loss:  1602.2759  L2 Error:  11.37212
+      z1, z2, z3 =  [ 0.02857357  0.15817228 -0.06123549]
+      variance =  [0.20734558 0.1912191  0.2118915 ]
+Epoch 96 completed in 0.22 seconds.
+Epoch:  96  Log likelihood loss:  2350.044  L2 Error:  11.253901
+      z1, z2, z3 =  [ 0.02783916  0.15779126 -0.06073337]
+      variance =  [0.20738895 0.19120872 0.21192223]
+Epoch 97 completed in 0.22 seconds.
+Epoch:  97  Log likelihood loss:  1627.0989  L2 Error:  11.129164
+      z1, z2, z3 =  [ 0.02773229  0.1581954  -0.06141092]
+      variance =  [0.20738295 0.19122696 0.21187772]
+Epoch 98 completed in 0.22 seconds.
+Epoch:  98  Log likelihood loss:  1564.0648  L2 Error:  11.038988
+      z1, z2, z3 =  [ 0.02835429  0.15819255 -0.06142668]
+      variance =  [0.20741627 0.19118059 0.21199195]
+Epoch 99 completed in 0.22 seconds.
+Epoch:  99  Log likelihood loss:  2026.2443  L2 Error:  10.934028
+      z1, z2, z3 =  [ 0.02876953  0.15840071 -0.06173221]
+      variance =  [0.20728762 0.1911757  0.21207012]
+Epoch 100 completed in 0.21 seconds.
+Traceback (most recent call last):
+  File "/home/pz/Documents/model_discrepancy/Hierarchical_Inference_and_Closure_Learning/poisson/train_PINNs.py", line 355, in <module>
+    main(cfg)
+  File "/home/pz/Documents/model_discrepancy/Hierarchical_Inference_and_Closure_Learning/poisson/train_PINNs.py", line 213, in main
+    error = l2_error(params_alpha, alpha_apply_fn,systems.max())
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pz/Documents/model_discrepancy/Hierarchical_Inference_and_Closure_Learning/poisson/train_PINNs.py", line 110, in l2_error
+    return jnp.linalg.norm(y_pred - y_true, ord=2)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

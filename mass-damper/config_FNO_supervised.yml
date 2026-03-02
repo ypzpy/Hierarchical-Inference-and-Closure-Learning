@@ -1,0 +1,73 @@
+data_systems:
+  rng_key: 0
+  n_systems: 30
+  stop_time: 8.0
+  dt: 0.08
+  obser_freq: 8
+  obser_noise: 0.1
+
+
+true_parameters:
+  hyperprior_k: 5.0
+  hyperprior_z0: 0.0
+  hyperprior_zdot: 2.0
+  tau_phi_theta: 0.03
+  tau_phi_z0: 2.0
+  tau_phi_zdot: 2.0
+  true_a: 0.08
+  true_b: 0.08
+
+
+hyperprior:
+  mean:
+    hyperprior_k_prior: 3.0
+    hyperprior_z0_prior: 0.5
+    hyperprior_zdot_prior: 1.0
+    hyperprior_mean_tau_theta: 0.1
+    hyperprior_mean_tau_z: 1.0
+  variance:
+    hyperprior_variance_mu_theta: 0.02
+    hyperprior_variance_tau_theta: 0.4
+    hyperprior_variance_mu_z0: 1.0
+    hyperprior_variance_tau_z0: 0.08
+    hyperprior_variance_mu_zdot: 1.0
+    hyperprior_variance_tau_zdot: 0.08
+
+
+langevin_sampler:
+  n_samples: 1
+  n_chains: 250
+  batch_num: 2
+  step_size: 0.01
+  accept_ratio: 0.574
+  step_size_lr: 0.01
+  damping_param: 10
+
+
+models:
+  mlp_alpha:
+    hidden_features: [64,64,64,64]
+    output_features: 1
+    learning_rate: 0.0005
+    n_decay_steps: 1000
+    decay_rate: 0.8
+  fno_beta:
+    dim_v: 32
+    n_modes: 16
+    out_dim: 2
+    n_layers: 4
+    activation: 'silu'
+    n_layers: 4
+    learning_rate: 0.0005
+    n_decay_steps: 2000
+    decay_rate: 0.8
+    opt_type: 'adam'
+    weight_decay: 0.001
+    fno_steps: 20
+
+
+wandb:
+  entity: "pz281-university-of-cambridge"
+  project: 'Bilevel Optimisation'
+  run_name: 'combined_run'
+  group: 'mass-damper-FNO-supervised'

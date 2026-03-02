@@ -1,0 +1,75 @@
+data_systems:
+  rng_key: 25
+  n_systems: 20
+  nx: 50
+  ny: 50
+  L_x: 1.0
+  L_y: 1.0
+  obser_noise: 0.1
+  obser_fraction: 0.024
+  no_parameters: 3
+
+
+true_parameters:
+  hyperprior_z1: 0.2
+  hyperprior_z2: -0.1
+  hyperprior_z3: 0.2
+  tau_phi_z1: 0.5
+  tau_phi_z2: 0.5
+  tau_phi_z3: 0.5
+
+
+hyperprior:
+  mean:
+    hyperprior_z1_prior: 0.0
+    hyperprior_z2_prior: 0.2
+    hyperprior_z3_prior: -0.1
+    hyperprior_mean_tau_z: 0.4
+  variance:
+    hyperprior_variance_mu_z1: 0.2
+    hyperprior_variance_tau_z1: 0.1
+    hyperprior_variance_mu_z2: 0.2
+    hyperprior_variance_tau_z2: 0.1
+    hyperprior_variance_mu_z3: 0.2
+    hyperprior_variance_tau_z3: 0.1
+
+
+langevin_sampler:
+  n_samples: 1
+  n_chains: 160
+  batch_num: 4
+  step_size: 0.018
+  accept_ratio: 0.574
+  step_size_lr: 0.005
+  damping_param: 10
+
+
+models:
+  mlp_alpha:
+    hidden_features: [64,64,64,64]
+    output_features: 1
+    learning_rate: 0.0005
+    n_decay_steps: 1000
+    decay_rate: 0.8
+  fno_beta:
+    dim_v: 32
+    n_modes: 16
+    out_dim: 1
+    n_layers: 4
+    activation: 'silu'
+    learning_rate: 0.0005
+    n_decay_steps: 2000
+    decay_rate: 0.8
+    opt_type: 'adam'
+    weight_decay: 0.001
+    fno_steps: 18
+
+
+wandb:
+  entity: "pz281-university-of-cambridge"
+  project: 'Bilevel Optimisation'
+  run_name: 'poisson'
+  # group: 'poisson supervised loss'
+  group: 'poisson FNO supervised'
+  # group: 'solver mala'
+  # group: 'pure mala'

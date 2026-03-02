@@ -1,0 +1,22 @@
+2026-03-02 22:07:29,193 INFO    MainThread:3253369 [wandb_setup.py:_flush():80] Current SDK version is 0.21.0
+2026-03-02 22:07:29,193 INFO    MainThread:3253369 [wandb_setup.py:_flush():80] Configure stats pid to 3253369
+2026-03-02 22:07:29,193 INFO    MainThread:3253369 [wandb_setup.py:_flush():80] Loading settings from /home/pz/.config/wandb/settings
+2026-03-02 22:07:29,193 INFO    MainThread:3253369 [wandb_setup.py:_flush():80] Loading settings from /home/pz/Documents/model_discrepancy/Hierarchical_Inference_and_Closure_Learning/poisson/wandb/settings
+2026-03-02 22:07:29,193 INFO    MainThread:3253369 [wandb_setup.py:_flush():80] Loading settings from environment variables
+2026-03-02 22:07:29,193 INFO    MainThread:3253369 [wandb_init.py:setup_run_log_directory():703] Logging user logs to /home/pz/Documents/model_discrepancy/Hierarchical_Inference_and_Closure_Learning/poisson/wandb/run-20260302_220729-u2fxitm2/logs/debug.log
+2026-03-02 22:07:29,193 INFO    MainThread:3253369 [wandb_init.py:setup_run_log_directory():704] Logging internal logs to /home/pz/Documents/model_discrepancy/Hierarchical_Inference_and_Closure_Learning/poisson/wandb/run-20260302_220729-u2fxitm2/logs/debug-internal.log
+2026-03-02 22:07:29,193 INFO    MainThread:3253369 [wandb_init.py:init():830] calling init triggers
+2026-03-02 22:07:29,193 INFO    MainThread:3253369 [wandb_init.py:init():835] wandb.init called with sweep_config: {}
+config: {'data_systems': namespace(rng_key=25, n_systems=20, nx=50, ny=50, L_x=1.0, L_y=1.0, obser_noise=0.1, obser_fraction=0.024, no_parameters=3), 'true_parameters': namespace(hyperprior_z1=0.2, hyperprior_z2=-0.1, hyperprior_z3=0.2, tau_phi_z1=0.5, tau_phi_z2=0.5, tau_phi_z3=0.5), 'hyperprior': namespace(mean=namespace(hyperprior_z1_prior=0.0, hyperprior_z2_prior=0.2, hyperprior_z3_prior=-0.1, hyperprior_mean_tau_z=0.4), variance=namespace(hyperprior_variance_mu_z1=0.2, hyperprior_variance_tau_z1=0.1, hyperprior_variance_mu_z2=0.2, hyperprior_variance_tau_z2=0.1, hyperprior_variance_mu_z3=0.2, hyperprior_variance_tau_z3=0.1)), 'langevin_sampler': namespace(n_samples=1, n_chains=160, batch_num=4, step_size=0.01, accept_ratio=0.574, step_size_lr=0.005, damping_param=10), 'models': namespace(mlp_alpha=namespace(hidden_features=[64, 64, 64, 64], output_features=1, learning_rate=0.0003, n_decay_steps=1000, decay_rate=0.8), pinn_beta=namespace(layers=[5, 64, 64, 64, 64, 64, 1], learning_rate=0.0003, n_decay_steps=2000, decay_rate=0.8, opt_type='adam', weight_decay=0.001, fno_steps=20)), 'wandb': namespace(entity='pz281-university-of-cambridge', project='Bilevel Optimisation', run_name='poisson', group='poisson PINNs'), '_wandb': {}}
+2026-03-02 22:07:29,194 INFO    MainThread:3253369 [wandb_init.py:init():871] starting backend
+2026-03-02 22:07:29,399 INFO    MainThread:3253369 [wandb_init.py:init():874] sending inform_init request
+2026-03-02 22:07:29,402 INFO    MainThread:3253369 [wandb_init.py:init():882] backend started and connected
+2026-03-02 22:07:29,404 INFO    MainThread:3253369 [wandb_init.py:init():953] updated telemetry
+2026-03-02 22:07:29,408 INFO    MainThread:3253369 [wandb_init.py:init():977] communicating run to backend with 90.0 second timeout
+2026-03-02 22:07:30,715 INFO    MainThread:3253369 [wandb_init.py:init():1029] starting run threads in backend
+2026-03-02 22:07:30,809 INFO    MainThread:3253369 [wandb_run.py:_console_start():2458] atexit reg
+2026-03-02 22:07:30,809 INFO    MainThread:3253369 [wandb_run.py:_redirect():2306] redirect: wrap_raw
+2026-03-02 22:07:30,809 INFO    MainThread:3253369 [wandb_run.py:_redirect():2375] Wrapping output streams.
+2026-03-02 22:07:30,809 INFO    MainThread:3253369 [wandb_run.py:_redirect():2398] Redirects installed.
+2026-03-02 22:07:30,810 INFO    MainThread:3253369 [wandb_init.py:init():1075] run started, returning control to user process
+2026-03-02 22:09:24,815 INFO    MsgRouterThr:3253369 [mailbox.py:close():129] [no run ID] Closing mailbox, abandoning 1 handles.
