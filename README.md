@@ -60,7 +60,7 @@ $$
 u_t + f(u) u_x = \nu u_{xx}, \quad u(x,0) = z \sin(2\pi x) \sin(\pi x)
 $$
 
-Nonlinear closure is $f(u) = 7\bigl(\boldsymbol{\sigma}(3u) - 0.5\bigr)$ and unknown parameters are $\boldsymbol{\theta} = (\log \nu, \text{amplitude})$. The grid spans $x \in [-1, 1]$, $t \in [0, 0.5]$.
+Nonlinear closure is $f(u) = 7\bigl(\boldsymbol{\sigma}(3u) - 0.5\bigr)$ and unknown parameters are $\boldsymbol{\theta} = (\log \nu, z)$. The grid spans $x \in [-1, 1]$, $t \in [0, 0.5]$.
 
 | Script | Forward model $\beta$ | Inner loss |
 |---|---|---|
