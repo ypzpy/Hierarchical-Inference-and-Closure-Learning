@@ -19,9 +19,11 @@ At each epoch, an **ensemble MALA** sweep first updates the hierarchical posteri
 
 A nonlinear oscillator with an unknown damping law:
 
-$$\ddot{u} + f(\dot{x}) + ku = F(t), \quad F(t) = 10\sin(t)$$
+$$
+\ddot{u} + f(\dot{x}) + ku = F(t), \quad F(t) = 10\sin(t)
+$$
 
-The true  closure is $f(\dot{x}) = 0.08\dot{u} + 0.08\dot{u}^3$. Unknown parameters are $\boldsymbol{\theta} = (\log k,\, x_0,\, \dot{x}_0)$.
+The true  closure is $f(\dot{x}) = 0.08\dot{u} + 0.08\dot{u}^3$. Unknown parameters are $\boldsymbol{\theta} = (\log k, x_0, \dot{x}_0)$.
 
 | Script | Forward model $\beta$ | Inner loss |
 |---|---|---|
@@ -35,9 +37,11 @@ The true  closure is $f(\dot{x}) = 0.08\dot{u} + 0.08\dot{u}^3$. Unknown paramet
 
 A nonlinear elliptic PDE with a learnable coefficient field:
 
-$$-\nabla \cdot \bigl(a(u, \mathbf{x})\,\nabla u\bigr) = s(\mathbf{x})$$
+$$
+-\nabla \cdot \bigl(a(u, \mathbf{x})\,\nabla u\bigr) = s(\mathbf{x})
+$$
 
-where $a(u;\mathbf{x}) = \exp \!\left(\sum_j z_j \phi_j(\mathbf{x})\right) \cdot \boldsymbol{\sigma}(f(u))$ and $f(u) = u^2/2$. Unknown parameters are $\boldsymbol{\theta} = (z_1, z_2, z_3)$. The grid is $[0,1]^2$ with $50 \times 50$ nodes.
+where $a(u;\mathbf{x}) = \exp \left(\sum_j z_j \phi_j(\mathbf{x})\right) \cdot \boldsymbol{\sigma}(f(u))$ and $f(u) = u^2/2$. Unknown parameters are $\boldsymbol{\theta} = (z_1, z_2, z_3)$. The grid is $[0,1]^2$ with $50 \times 50$ nodes.
 
 | Script | Forward model $\beta$ | Inner loss |
 |---|---|---|
@@ -52,7 +56,9 @@ where $a(u;\mathbf{x}) = \exp \!\left(\sum_j z_j \phi_j(\mathbf{x})\right) \cdot
 
 A generalized Burgers equation with an unknown convective term:
 
-$$u_t + f(u)\,u_x = \nu\, u_{xx}, \quad u(x,0) = z \sin(2\pi x) \sin(\pi x)$$
+$$
+u_t + f(u)\,u_x = \nu\, u_{xx}, \quad u(x,0) = z \sin(2\pi x) \sin(\pi x)
+$$
 
 Nonlinear closure is $f(u) = 7\bigl(\boldsymbol{\sigma}(3u) - 0.5\bigr)$ and unknown parameters are $\boldsymbol{\theta} = (\log \nu,\, \text{amplitude})$. The grid spans $x \in [-1, 1]$, $t \in [0, 0.5]$.
 
@@ -190,11 +196,3 @@ All runs log metrics and plots to [Weights & Biases](https://wandb.ai). Set your
 | `models.mlp_alpha.*` | Closure $\alpha$ MLP architecture and optimizer settings |
 | `models.fno_beta.*` | FNO surrogate $\beta$ architecture and optimizer settings |
 | `models.pinn_beta.*` | PINN surrogate $\beta$ architecture and optimizer settings |
-
-## Outputs
-
-Checkpoints are saved inside the WandB run directory under `checkpoints/`:
-- `best_model_1` — model with lowest closure $L_2$ error seen so far
-- `current_model_1` — periodic snapshot every 200 epochs
-- `parameters.npy`, `H_mats.npy`, `y_obser.npy` — ground truth data
-- `whole_chain.npy`, `*_loss.npy` — sampler chain and loss histories
