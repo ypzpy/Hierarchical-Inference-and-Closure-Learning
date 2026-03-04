@@ -20,7 +20,7 @@ At each epoch, an **ensemble MALA** sweep first updates the hierarchical posteri
 A nonlinear oscillator with an unknown damping law:
 
 $$
-\ddot{u} + f(\dot{x}) + ku = F(t), \quad F(t) = 10\sin(t)
+\ddot{u} + f(\dot{u}) + ku = F(t), \quad F(t) = 10\sin(t)
 $$
 
 The true  closure is $f(\dot{x}) = 0.08\dot{u} + 0.08\dot{u}^3$. Unknown parameters are $\boldsymbol{\theta} = (\log k, x_0, \dot{x}_0)$.
@@ -52,7 +52,7 @@ where $a(u;\mathbf{x}) = \exp \left(\sum_j z_j \phi_j(\mathbf{x})\right) \cdot \
 | `train_PINNs_nonhierarchy.py` | PINN | Physics residual |
 
 
-### 3. Burgers Equation (1D PDE) — `burgers/`
+### 3. Generalized Burgers Equation (PDE) — `burgers/`
 
 A generalized Burgers equation with an unknown convective term:
 
@@ -139,24 +139,14 @@ Nonlinear closure is $f(u) = 7\bigl(\boldsymbol{\sigma}(3u) - 0.5\bigr)$ and unk
 
 ## Dependencies
 
-```
-jax
-jaxlib
-flax
-optax
-jaxopt
-ml_collections
-wandb
-numpy
-matplotlib
-```
+Install all dependencies from the provided `environment.yml`:
 
-Install with:
 ```bash
-pip install jax jaxlib flax optax jaxopt ml-collections wandb numpy matplotlib
+conda env create -f environment.yml
+conda activate jax
 ```
 
-GPU support requires the appropriate `jaxlib` build; see the [JAX installation guide](https://github.com/google/jax#installation).
+GPU support requires the appropriate `jaxlib` build; please see the [JAX installation guide](https://github.com/google/jax#installation).
 
 ## Running Experiments
 
@@ -174,7 +164,7 @@ python train_FNO_supervised.py
 python train_solver.py
 
 # Darcy Flow: bilevel with PINN surrogate
-cd ../poisson
+cd ../darcy
 python train_PINNs.py
 
 # Burgers equation
@@ -183,16 +173,3 @@ python train_FNO_supervised.py
 ```
 
 All runs log metrics and plots to [Weights & Biases](https://wandb.ai). Set your entity in the `wandb:` section of the config file.
-
-### Key Config Parameters
-
-| Parameter | Description |
-|---|---|
-| `data_systems.n_systems` | Number of independent physical systems |
-| `data_systems.obser_noise` | Observation noise standard deviation $\sigma_{\text{obs}}$ |
-| `langevin_sampler.n_chains` | Number of MALA chains |
-| `langevin_sampler.n_samples` | MALA steps per outer epoch |
-| `langevin_sampler.step_size` | Initial MALA step size $\varepsilon$ |
-| `models.mlp_alpha.*` | Closure $\alpha$ MLP architecture and optimizer settings |
-| `models.fno_beta.*` | FNO surrogate $\beta$ architecture and optimizer settings |
-| `models.pinn_beta.*` | PINN surrogate $\beta$ architecture and optimizer settings |
