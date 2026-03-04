@@ -9,7 +9,7 @@ This repository implements a framework that jointly:
 2. **Learns a closure term** $\alpha$ (an MLP) representing unknown physics (e.g., nonlinear damping law).
 3. **Trains a forward surrogate model** $\beta$ (an FNO or PINN) that maps system parameters to PDE/ODE solutions conditioned on the current closure $\alpha$.
 
-At each epoch, an **ensemble MALA** step first updates the hierarchical posterior over unknown parameters $\boldsymbol{\theta}$ and population-level hyperparameters $\boldsymbol{\phi} = (\boldsymbol{\mu}_{\boldsymbol{\phi}}, \boldsymbol{\tau}_{\boldsymbol{\phi}})$, using the current $\alpha$ and $\beta$. The resulting chain samples are then passed to a **bilevel optimization** step:
+At each epoch, an **ensemble MALA** step first updates the hierarchical posterior over unknown parameters $\boldsymbol{\theta}$ and population-level hyperparameters $\boldsymbol{\phi} = (\boldsymbol{\mu}_{\boldsymbol{\phi}}, \boldsymbol{\tau}_{\boldsymbol{\phi}})$ , using the current $\alpha$ and $\beta$ . The resulting chain samples are then passed to a **bilevel optimization** step:
 - **Inner loop (lower level):** Optimize $\beta$ to minimize a physics residual or supervised loss given $\alpha$.
 - **Outer loop (upper level):** Optimize $\alpha$ to maximize the marginal log-likelihood of observations, with $\beta$ treated as having converged from the inner loop.
 
