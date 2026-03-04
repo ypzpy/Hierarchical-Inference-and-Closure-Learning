@@ -6,8 +6,8 @@ Code accompanying the paper on bilevel optimization for simultaneous hierarchica
 
 This repository implements a framework that jointly:
 1. **Infers system parameters** across multiple related physical systems via a hierarchical Bayesian model, using ensemble MALA (Metropolis-Adjusted Langevin Algorithm) for posterior sampling.
-2. **Learns a closure term** $\alpha$ (an MLP) representing unknown physics (e.g., nonlinear damping law).
-3. **Trains a forward surrogate model** $\beta$ (an FNO or PINN) that maps system parameters to PDE/ODE solutions conditioned on the current closure $\alpha$.
+2. **Learns a closure term** $`\alpha`$ (an MLP) representing unknown physics (e.g., nonlinear damping law).
+3. **Trains a forward surrogate model** $`\beta`$ (an FNO or PINN) that maps system parameters to PDE/ODE solutions conditioned on the current closure $\alpha$.
 
 At each epoch, an **ensemble MALA** step first updates the hierarchical posterior over unknown parameters $\boldsymbol{\theta}$ and population-level hyperparameters $\boldsymbol{\phi} = (\boldsymbol{\mu}_{\boldsymbol{\phi}}, \boldsymbol{\tau}_{\boldsymbol{\phi}})$ , using the current $\alpha$ and $\beta$ . The resulting chain samples are then passed to a **bilevel optimization** step:
 - **Inner loop (lower level):** Optimize $\beta$ to minimize a physics residual or supervised loss given $\alpha$.
