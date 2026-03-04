@@ -6,7 +6,7 @@ Code accompanying the paper on bilevel optimization for simultaneous hierarchica
 
 This repository implements a framework that jointly:
 1. **Infers system parameters** across multiple related physical systems via a hierarchical Bayesian model, using ensemble MALA (Metropolis-Adjusted Langevin Algorithm) for posterior sampling.
-2. **Learns a closure term** $`\alpha`$ (an MLP) representing unknown physics (e.g., nonlinear damping law).
+2. **Learns a closure model** $`\alpha`$ (an MLP) representing unknown physics (e.g., nonlinear damping law).
 3. **Trains a forward surrogate model** $`\beta`$ (an FNO or PINN) that maps system parameters to PDE/ODE solutions conditioned on the current closure $`\alpha`$.
 
 At each epoch, an **ensemble MALA** step first updates the hierarchical posterior over unknown parameters $`\boldsymbol{\theta}`$ and population-level hyperparameters $`\boldsymbol{\phi} = (\boldsymbol{\mu}_{\boldsymbol{\phi}}, \boldsymbol{\tau}_{\boldsymbol{\phi}})`$, using the current $`\alpha`$ and $`\beta`$. The resulting chain samples are then passed to a **bilevel optimization** step:
@@ -20,7 +20,11 @@ At each epoch, an **ensemble MALA** step first updates the hierarchical posterio
 A nonlinear oscillator with an unknown damping law:
 
 $$
-\ddot{u} + f(\dot{u}) + ku = F(t), \quad F(t) = 10\sin(t)
+\begin{aligned}
+\ddot{u} + f(\dot{u}) + ku &= F(t), \quad F(t) = 10\sin(t) \\
+u(0) &= x_0, \\
+\dot{u}(0) &= \dot{x}_0.
+\end{aligned}
 $$
 
 The true  closure is $f(\dot{u}) = 0.08\dot{u} + 0.08\dot{u}^3$. Unknown parameters are $\boldsymbol{\theta} = (\log k, x_0, \dot{x}_0)$.
@@ -35,13 +39,13 @@ The true  closure is $f(\dot{u}) = 0.08\dot{u} + 0.08\dot{u}^3$. Unknown paramet
 
 ### 2. Darcy Flow (2D PDE) — `darcy/`
 
-A nonlinear elliptic PDE with a learnable coefficient field:
+A nonlinear elliptic PDE with a learnable permeability field:
 
 $$
 -\nabla \cdot \bigl(a(u, \mathbf{x})\,\nabla u\bigr) = s(\mathbf{x})
 $$
 
-where $a(u;\mathbf{x}) = \exp \left(\sum_j z_j \phi_j(\mathbf{x})\right) \cdot \boldsymbol{\sigma}(f(u))$ and $f(u) = u^2/2$. Unknown parameters are $\boldsymbol{\theta} = (z_1, z_2, z_3)$. The grid is $[0,1]^2$ with $50 \times 50$ nodes.
+where $a(u, \mathbf{x}) = \exp \left(\sum_j z_j \phi_j(\mathbf{x})\right) \cdot \boldsymbol{\sigma}(f(u))$ and $f(u) = u^2/2$. Unknown parameters are $\boldsymbol{\theta} = (z_1, z_2, z_3)$. The grid is $[0,1]^2$ with $50 \times 50$ nodes.
 
 | Script | Forward model $\beta$ | Inner loss |
 |---|---|---|
@@ -57,7 +61,7 @@ where $a(u;\mathbf{x}) = \exp \left(\sum_j z_j \phi_j(\mathbf{x})\right) \cdot \
 A generalized Burgers equation with an unknown convective term:
 
 $$
-u_t + f(u) u_x = \nu u_{xx}, \quad u(x,0) = z \sin(2\pi x) \sin(\pi x)
+u_t + f(u) u_x = \nu u_{xx}, \quad u(x,0) = z \sin(2\pi x) \sin(\pi x).
 $$
 
 Nonlinear closure is $f(u) = 7\bigl(\boldsymbol{\sigma}(3u) - 0.5\bigr)$ and unknown parameters are $\boldsymbol{\theta} = (\log \nu, z)$. The grid spans $x \in [-1, 1]$, $t \in [0, 0.5]$.
