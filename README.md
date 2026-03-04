@@ -38,7 +38,7 @@ with initial position $x_0$ and initial velocity $\dot{x}_0$. The true  closure 
 A nonlinear elliptic PDE with a learnable permeability field:
 
 $$
--\nabla \cdot \bigl(a(u, \mathbf{x})\,\nabla u\bigr) = s(\mathbf{x})
+-\nabla \cdot \bigl(a(u, \mathbf{x}) \nabla u\bigr) = s(\mathbf{x})
 $$
 
 where $a(u, \mathbf{x}) = \exp \left(\sum_j z_j \phi_j(\mathbf{x})\right) \cdot \boldsymbol{\sigma}(f(u))$ and $f(u) = u^2/2$. Unknown parameters are $\boldsymbol{\theta} = (z_1, z_2, z_3)$. The grid is $[0,1]^2$ with $50 \times 50$ nodes.
