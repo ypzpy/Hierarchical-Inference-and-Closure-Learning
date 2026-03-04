@@ -20,14 +20,10 @@ At each epoch, an **ensemble MALA** step first updates the hierarchical posterio
 A nonlinear oscillator with an unknown damping law:
 
 $$
-\begin{aligned}
-\ddot{u} + f(\dot{u}) + ku &= F(t), \quad F(t) = 10\sin(t) \\
-u(0) &= x_0, \\
-\dot{u}(0) &= \dot{x}_0.
-\end{aligned}
+\ddot{u} + f(\dot{u}) + ku = F(t), \quad F(t) = 10\sin(t),
 $$
 
-The true  closure is $f(\dot{u}) = 0.08\dot{u} + 0.08\dot{u}^3$. Unknown parameters are $\boldsymbol{\theta} = (\log k, x_0, \dot{x}_0)$.
+with initial position $x_0$ and initial velocity $\dot{x}_0$. The true  closure is $f(\dot{u}) = 0.08\dot{u} + 0.08\dot{u}^3$. Unknown parameters are $\boldsymbol{\theta} = (\log k, x_0, \dot{x}_0)$.
 
 | Script | Forward model $\beta$ | Inner loss |
 |---|---|---|
