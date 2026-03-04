@@ -66,6 +66,43 @@ Nonlinear closure is $f(u) = 7\bigl(\boldsymbol{\sigma}(3u) - 0.5\bigr)$ and unk
 |---|---|---|
 | `train_FNO_supervised.py` | FNO (2D) | Supervised |
 
+## Dependencies
+
+Install all dependencies from the provided `environment.yml`:
+
+```bash
+conda env create -f environment.yml
+conda activate jax
+```
+
+GPU support requires the appropriate `jaxlib` build; please see the [JAX installation guide](https://github.com/google/jax#installation).
+
+## Running Experiments
+
+Each script reads its configuration from a YAML file in the same directory. Edit the relevant `config_*.yml` before running.
+
+```bash
+# Mass-damper: bilevel with PINN surrogate
+cd mass-damper
+python train_PINNs.py
+
+# Mass-damper: bilevel with FNO surrogate (supervised inner loss)
+python train_FNO_supervised.py
+
+# Mass-damper: alternating inference with exact ODE solver
+python train_solver.py
+
+# Darcy Flow: bilevel with PINN surrogate
+cd ../darcy
+python train_PINNs.py
+
+# Burgers equation
+cd ../burgers
+python train_FNO_supervised.py
+```
+
+All runs log metrics and plots to [Weights & Biases](https://wandb.ai). Set your entity in the `wandb:` section of the config file.
+
 ## Repository Structure
 
 ```
@@ -136,40 +173,3 @@ Nonlinear closure is $f(u) = 7\bigl(\boldsymbol{\sigma}(3u) - 0.5\bigr)$ and unk
     ├── train_FNO_supervised.py     # Bilevel: FNO surrogate, supervised inner loss
     └── config_FNO_supervised.yml
 ```
-
-## Dependencies
-
-Install all dependencies from the provided `environment.yml`:
-
-```bash
-conda env create -f environment.yml
-conda activate jax
-```
-
-GPU support requires the appropriate `jaxlib` build; please see the [JAX installation guide](https://github.com/google/jax#installation).
-
-## Running Experiments
-
-Each script reads its configuration from a YAML file in the same directory. Edit the relevant `config_*.yml` before running.
-
-```bash
-# Mass-damper: bilevel with PINN surrogate
-cd mass-damper
-python train_PINNs.py
-
-# Mass-damper: bilevel with FNO surrogate (supervised inner loss)
-python train_FNO_supervised.py
-
-# Mass-damper: alternating inference with exact ODE solver
-python train_solver.py
-
-# Darcy Flow: bilevel with PINN surrogate
-cd ../darcy
-python train_PINNs.py
-
-# Burgers equation
-cd ../burgers
-python train_FNO_supervised.py
-```
-
-All runs log metrics and plots to [Weights & Biases](https://wandb.ai). Set your entity in the `wandb:` section of the config file.
