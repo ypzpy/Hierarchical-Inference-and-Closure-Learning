@@ -1,6 +1,6 @@
 # Hierarchical Inference and Closure Learning via Bilevel Optimization
 
-Code accompanying the paper on bilevel optimization for simultaneous hierarchical Bayesian inference and closure learning in physics-based models.
+Code accompanying the paper: **[Hierarchical Inference and Closure Learning via Adaptive Surrogates for ODEs and PDEs](https://doi.org/10.48550/arXiv.2603.03922)**
 
 ## Overview
 
