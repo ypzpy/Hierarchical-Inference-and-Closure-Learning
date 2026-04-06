@@ -31,7 +31,7 @@ prior:
 
 langevin_sampler:
   n_samples: 1
-  n_chains: 200
+  n_chains: 400
   batch_num: 2
   step_size: 0.01
   accept_ratio: 0.574

@@ -136,7 +136,7 @@ def bilevel_train_step(params_alpha, params_beta, opt_state_alpha, opt_state_bet
     def get_alpha_loss_for_grad(p_alpha, p_beta_initial, opt_state_beta_initial, full_theta_batch, rng_key_for_inner_loop):
         
         inner_loop_fn_checkpointed = remat(inner_loop_fn)
-        p_beta_final, _, _ = inner_loop_fn_checkpointed(p_alpha, p_beta_initial, opt_state_beta_initial, rng_key_for_inner_loop)
+        p_beta_final, opt_state_beta, inner_loss_val = inner_loop_fn_checkpointed(p_alpha, p_beta_initial, opt_state_beta_initial, rng_key_for_inner_loop)
         
         theta_micro_batches = full_theta_batch.reshape((cfg.langevin_sampler.batch_num, batch_size, full_theta_batch.shape[1]))
 
@@ -153,11 +153,11 @@ def bilevel_train_step(params_alpha, params_beta, opt_state_alpha, opt_state_bet
             theta_micro_batches
         )
         
-        return total_loss / cfg.langevin_sampler.batch_num, losses_per_batch
+        return total_loss / cfg.langevin_sampler.batch_num, losses_per_batch, p_beta_final, opt_state_beta, inner_loss_val
 
     outer_loss_grad_fn = jax.grad(lambda *args: get_alpha_loss_for_grad(*args)[0], argnums=0)
     
-    outer_loss_val, _ = get_alpha_loss_for_grad(
+    outer_loss_val, _, params_beta, opt_state_beta, inner_loss_val = get_alpha_loss_for_grad(
         params_alpha, params_beta, opt_state_beta, theta_batch, rng_key
     )
 
@@ -168,7 +168,7 @@ def bilevel_train_step(params_alpha, params_beta, opt_state_alpha, opt_state_bet
     updates_alpha, opt_state_alpha = alpha_optimiser.update(grads_alpha, opt_state_alpha, params_alpha)
     params_alpha = optax.apply_updates(params_alpha, updates_alpha)
     
-    params_beta, opt_state_beta, inner_loss_val = inner_loop_fn(params_alpha, params_beta, opt_state_beta, rng_key)
+    # params_beta, opt_state_beta, inner_loss_val = inner_loop_fn(params_alpha, params_beta, opt_state_beta, rng_key)
     
     return params_alpha, params_beta, opt_state_alpha, opt_state_beta, jnp.mean(outer_loss_val), inner_loss_val
 

@@ -1,6 +1,6 @@
 data_systems:
   rng_key: 25
-  n_systems: 20
+  n_systems: 10
   nx: 50
   ny: 50
   L_x: 1.0
@@ -36,7 +36,7 @@ hyperprior:
 
 langevin_sampler:
   n_samples: 1
-  n_chains: 160
+  n_chains: 100
   batch_num: 4
   step_size: 0.01
   accept_ratio: 0.574
